@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:katalog_game/theme.dart';
+import 'package:katalog_game/widgets/game_card.dart';
     
 class HomePage extends StatelessWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -7,10 +8,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: blackColor,
-      appBar: AppBar(
+      /* appBar: AppBar(
         title: Text('Catalog Game'),
-        backgroundColor: Colors.blue,
-      ),
+        backgroundColor: whiteColor,
+      ), */
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,28 +20,32 @@ class HomePage extends StatelessWidget {
               height: edge,
             ),
             //JUDUL
-            Padding(
-              padding: EdgeInsets.only(left: edge,),
-              child: Text(
-                'Best Games',
-                style: TextStyle(
-                  color: whiteColor,
-                  fontSize: 24,
-                  fontFamily: 'Poppins' 
+            Center(
+              child: Padding(
+                padding: EdgeInsets.only(left: edge,),
+                child: Text(
+                  'Best Games',
+                  style: TextStyle(
+                    color: whiteColor,
+                    fontSize: 24,
+                    fontFamily: 'Poppins' 
+                  ),
                 ),
               ),
             ),
             SizedBox(
               height: 2,
             ),
-            Padding(
-              padding: EdgeInsets.only(left: edge),
-              child: Text(
-                'Play Now!',
-                style: TextStyle(
-                  color: whiteColor,
-                  fontSize: 18,
-                  fontFamily: 'Poppins'
+            Center(
+              child: Padding(
+                padding: EdgeInsets.only(left: edge),
+                child: Text(
+                  'Play Now!',
+                  style: TextStyle(
+                    color: whiteColor,
+                    fontSize: 18,
+                    fontFamily: 'Poppins'
+                  ),
                 ),
               ),
             ),
@@ -56,6 +61,12 @@ class HomePage extends StatelessWidget {
                   color: whiteColor,
                 ),
               ),
+            ),
+            SizedBox(
+              height: 16
+            ),
+            Expanded(
+              child: GameCard(),
             )
           ],
         ) 

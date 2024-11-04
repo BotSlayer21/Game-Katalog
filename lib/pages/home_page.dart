@@ -8,10 +8,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: blackColor,
-      /* appBar: AppBar(
-        title: Text('Catalog Game'),
-        backgroundColor: whiteColor,
-      ), */
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

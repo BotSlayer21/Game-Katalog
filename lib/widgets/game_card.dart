@@ -60,7 +60,7 @@ class GameCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
-                              'Rp. ${items.price.toStringAsFixed(3)}',
+                              items.price == 'Free' ? items.price : 'Rp. ${items.price}',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'Poppins',

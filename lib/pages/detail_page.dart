@@ -10,9 +10,6 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: blackColor,
-/*       appBar: AppBar(
-        title: const Text(''),
-      ), */
       body: SafeArea(
         bottom: false,
         child: Stack(
@@ -137,7 +134,7 @@ class DetailPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              'Rp. ${games.price.toStringAsFixed(3)}',
+                              games.price == 'Free' ? games.price : 'Rp. ${games.price}',
                               style: TextStyle(
                                   color: blackColor,
                                   fontSize: 24,
